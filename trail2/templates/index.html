@@ -1,0 +1,32 @@
+<html>
+<head>
+
+</head>
+<body>
+<form action="/submit/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table align="center" border="2">
+<input type="number" name="num" placeholder="Enter a frame no..">
+<button type="submit">Play</button>
+    </table>
+</form>
+<form action="/find/" method="post">
+    {% csrf_token %}
+    <button type="submit">Find number of frames</button>
+</form>
+<form action="/offline/" method="post">
+    {% csrf_token %}
+    <button type="submit">Offline_play_save</button>
+</form>
+<form action="/onlinecam/" method="post">
+    {% csrf_token %}
+    <button type="submit">OnlineCam_play_save</button>
+</form>
+<form method="post" action="/design/">
+    {% csrf_token %}
+    <button type="submit">Assignments</button>
+</form>
+<h2>{{ message }}</h2>
+</body>
+</html>
+
